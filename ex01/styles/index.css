@@ -1,0 +1,92 @@
+.mosaicRow {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.mosaicColumn {
+  position: relative;
+  height: 100%;
+  flex: 23%;
+  max-width: 23%;
+  padding: 1%;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.black {
+  transition: 0.5s ease;
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.imgTitle {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  opacity: 0;
+  text-decoration: none;
+  color: white;
+}
+
+.mosaicColumn img {
+  position: relative;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.black:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.black:hover > .imgTitle {
+  opacity: 1;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background-color: #f4f4f4;
+  margin: 10% auto;
+  padding: 5%;
+  width: 70%;
+  height: 100%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.closeBtn {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+}
+
+.closeBtn:hover,
+.closeBtn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.frame {
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
